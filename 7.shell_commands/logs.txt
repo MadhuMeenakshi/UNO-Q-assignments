@@ -1,0 +1,399 @@
+
+
+madhu@MADHU-KAUSHIK:/mnt/c/Btsilica_Projects/QC_tools/platform-tools$ ./adb.exe shell
+arduino@uno-q-bitsilica:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: br-e934ee4dd8fd: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:d5:2e:a7:e7 brd ff:ff:ff:ff:ff:ff
+    inet 172.19.0.1/16 brd 172.19.255.255 scope global br-e934ee4dd8fd
+       valid_lft forever preferred_lft forever
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:e8:93:60:68 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+4: br-3f91988df8f4: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:ce:68:01:dc brd ff:ff:ff:ff:ff:ff
+    inet 172.24.0.1/16 brd 172.24.255.255 scope global br-3f91988df8f4
+       valid_lft forever preferred_lft forever
+5: br-5051813c4388: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:c6:4d:5d:3d brd ff:ff:ff:ff:ff:ff
+    inet 172.25.0.1/16 brd 172.25.255.255 scope global br-5051813c4388
+       valid_lft forever preferred_lft forever
+6: br-007a4242258a: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:42:fc:4c:78 brd ff:ff:ff:ff:ff:ff
+    inet 172.23.0.1/16 brd 172.23.255.255 scope global br-007a4242258a
+       valid_lft forever preferred_lft forever
+7: br-0ba10762b7bd: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:39:39:18:ae brd ff:ff:ff:ff:ff:ff
+    inet 172.20.0.1/16 brd 172.20.255.255 scope global br-0ba10762b7bd
+       valid_lft forever preferred_lft forever
+8: br-337a535e7c38: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:ec:8f:3c:34 brd ff:ff:ff:ff:ff:ff
+    inet 172.21.0.1/16 brd 172.21.255.255 scope global br-337a535e7c38
+       valid_lft forever preferred_lft forever
+9: br-97c4740551dd: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:04:90:b6:8f brd ff:ff:ff:ff:ff:ff
+    inet 172.22.0.1/16 brd 172.22.255.255 scope global br-97c4740551dd
+       valid_lft forever preferred_lft forever
+10: br-e703dcb965fe: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:53:d4:41:3a brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-e703dcb965fe
+       valid_lft forever preferred_lft forever
+11: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 14:b5:cd:f0:be:23 brd ff:ff:ff:ff:ff:ff
+    altname wlx14b5cdf0be23
+    inet 192.168.5.199/24 brd 192.168.5.255 scope global dynamic noprefixroute wlan0
+       valid_lft 7040sec preferred_lft 7040sec
+    inet6 fe80::575d:1e3b:81f7:3e9c/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+arduino@uno-q-bitsilica:~$ hostname -I
+172.19.0.1 172.17.0.1 172.24.0.1 172.25.0.1 172.23.0.1 172.20.0.1 172.21.0.1 172.22.0.1 172.18.0.1 192.168.5.199
+arduino@uno-q-bitsilica:~$ ssh arduino@<UNO_Q_IP>
+bash: syntax error near unexpected token `newline'
+arduino@uno-q-bitsilica:~$ ssh arduino@192.168.1.25
+.'
+
+
+
+
+
+^Z
+[1]+  Stopped                 ssh arduino@192.168.1.25
+arduino@uno-q-bitsilica:~$ cd /proc
+arduino@uno-q-bitsilica:/proc$ ls
+1     1141  1298  163  174  185  25   33   366  398  45   50   572  63   706  91         device-tree  kallsyms     modules       sys
+1025  116   13    164  175  19   254  34   37   4    450  509  577  633  74   asound     diskstats    keys         mounts        sysrq-trigger
+1093  1162  1301  165  176  2    26   35   372  40   455  51   578  634  75   buddyinfo  driver       key-users    mtd           sysvipc
+1094  1169  1308  167  177  20   27   354  373  41   456  512  58   648  76   bus        execdomains  kmsg         net           thread-self
+11    1172  1321  168  178  202  29   355  374  42   46   517  580  653  765  cgroups    fb           kpagecgroup  pagetypeinfo  timer_list
+1131  1198  1328  169  179  203  294  36   376  43   462  53   59   66   77   cmdline    filesystems  kpagecount   partitions    tty
+1132  120   1330  17   18   21   3    360  378  44   465  532  6    67   799  config.gz  fs           kpageflags   self          uptime
+1133  1200  14    170  180  216  30   361  379  443  469  558  60   68   8    consoles   interrupts   loadavg      slabinfo      version
+1134  1276  15    171  181  217  303  362  38   446  481  56   61   69   86   cpuinfo    iomem        locks        softirqs      vmallocinfo
+1135  1278  159   172  182  22   31   363  39   448  49   570  62   7    89   crypto     ioports      meminfo      stat          vmstat
+1137  128   16    173  183  24   32   364  397  449  5    571  623  70   90   devices    irq          misc         swaps         zoneinfo
+arduino@uno-q-bitsilica:/proc$ cat /proc/cpuinfo
+processor       : 0
+BogoMIPS        : 38.40
+Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+CPU implementer : 0x51
+CPU architecture: 8
+CPU variant     : 0xa
+CPU part        : 0x801
+CPU revision    : 4
+
+processor       : 1
+BogoMIPS        : 38.40
+Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+CPU implementer : 0x51
+CPU architecture: 8
+CPU variant     : 0xa
+CPU part        : 0x801
+CPU revision    : 4
+
+processor       : 2
+BogoMIPS        : 38.40
+Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+CPU implementer : 0x51
+CPU architecture: 8
+CPU variant     : 0xa
+CPU part        : 0x801
+CPU revision    : 4
+
+processor       : 3
+BogoMIPS        : 38.40
+Features        : fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+CPU implementer : 0x51
+CPU architecture: 8
+CPU variant     : 0xa
+CPU part        : 0x801
+CPU revision    : 4
+
+arduino@uno-q-bitsilica:/proc$ cat /proc/meminfo
+MemTotal:        3757952 kB
+MemFree:         2890212 kB
+MemAvailable:    3264356 kB
+Buffers:           30128 kB
+Cached:           495480 kB
+SwapCached:            0 kB
+Active:            74172 kB
+Inactive:         617152 kB
+Active(anon):       1376 kB
+Inactive(anon):   203720 kB
+Active(file):      72796 kB
+Inactive(file):   413432 kB
+Unevictable:       34616 kB
+Mlocked:               0 kB
+SwapTotal:       1878972 kB
+SwapFree:        1878972 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:        200332 kB
+Mapped:           263160 kB
+Shmem:             39492 kB
+KReclaimable:      31408 kB
+Slab:              65900 kB
+SReclaimable:      31408 kB
+SUnreclaim:        34492 kB
+KernelStack:        4336 kB
+PageTables:         6120 kB
+SecPageTables:       532 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     3757948 kB
+Committed_AS:    1347888 kB
+VmallocTotal:   135288315904 kB
+VmallocUsed:       27252 kB
+VmallocChunk:          0 kB
+Percpu:             1392 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:     94208 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:          32768 kB
+CmaFree:           31220 kB
+Balloon:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+arduino@uno-q-bitsilica:/proc$ cat /proc/uptime
+2202.92 8728.49
+arduino@uno-q-bitsilica:/proc$ ls /proc | head
+1
+1025
+1093
+1094
+11
+1131
+1132
+1133
+1134
+1135
+arduino@uno-q-bitsilica:/proc$ ps
+    PID TTY          TIME CMD
+   1308 pts/0    00:00:00 bash
+   1328 pts/0    00:00:00 ssh
+   1336 pts/0    00:00:00 ps
+arduino@uno-q-bitsilica:/proc$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.2  0.3  25348 14616 ?        Ss   10:59   0:06 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    10:59   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    10:59   0:00 [pool_workqueue_release]
+root           4  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-rcu_gp]
+root           5  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-sync_wq]
+root           6  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-kvfree_rcu_reclaim]
+root           7  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-slub_flushwq]
+root           8  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-netns]
+root          11  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/0:0H-events_highpri]
+root          13  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-mm_percpu_wq]
+root          14  0.0  0.0      0     0 ?        S    10:59   0:00 [ksoftirqd/0]
+root          15  0.0  0.0      0     0 ?        I    10:59   0:00 [rcu_preempt]
+root          16  0.0  0.0      0     0 ?        S    10:59   0:00 [rcu_exp_par_gp_kthread_worker/0]
+root          17  0.0  0.0      0     0 ?        S    10:59   0:00 [rcu_exp_gp_kthread_worker]
+root          18  0.0  0.0      0     0 ?        S    10:59   0:00 [migration/0]
+root          19  0.0  0.0      0     0 ?        S    10:59   0:00 [cpuhp/0]
+root          20  0.0  0.0      0     0 ?        S    10:59   0:00 [cpuhp/1]
+root          21  0.0  0.0      0     0 ?        S    10:59   0:00 [migration/1]
+root          22  0.0  0.0      0     0 ?        S    10:59   0:00 [ksoftirqd/1]
+root          24  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/1:0H-kblockd]
+root          25  0.0  0.0      0     0 ?        S    10:59   0:00 [cpuhp/2]
+root          26  0.0  0.0      0     0 ?        S    10:59   0:00 [migration/2]
+root          27  0.0  0.0      0     0 ?        S    10:59   0:00 [ksoftirqd/2]
+root          29  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/2:0H-events_highpri]
+root          30  0.0  0.0      0     0 ?        S    10:59   0:00 [cpuhp/3]
+root          31  0.0  0.0      0     0 ?        S    10:59   0:00 [migration/3]
+root          32  0.0  0.0      0     0 ?        S    10:59   0:00 [ksoftirqd/3]
+root          33  0.0  0.0      0     0 ?        I    10:59   0:00 [kworker/3:0-mm_percpu_wq]
+root          34  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/3:0H-events_highpri]
+root          35  0.0  0.0      0     0 ?        S    10:59   0:00 [kdevtmpfs]
+root          36  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-inet_frag_wq]
+root          37  0.0  0.0      0     0 ?        I    10:59   0:00 [rcu_tasks_kthread]
+root          38  0.0  0.0      0     0 ?        I    10:59   0:00 [rcu_tasks_trace_kthread]
+root          39  0.0  0.0      0     0 ?        S    10:59   0:00 [oom_reaper]
+root          40  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-writeback]
+root          41  0.0  0.0      0     0 ?        S    10:59   0:00 [kcompactd0]
+root          42  0.0  0.0      0     0 ?        SN   10:59   0:00 [ksmd]
+root          43  0.0  0.0      0     0 ?        SN   10:59   0:00 [khugepaged]
+root          44  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-kblockd]
+root          45  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-blkcg_punt_bio]
+root          46  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-kintegrityd]
+root          49  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-tpm_dev_wq]
+root          50  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-ata_sff]
+root          51  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-edac-poller]
+root          53  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-devfreq_wq]
+root          56  0.0  0.0      0     0 ?        S    10:59   0:00 [watchdogd]
+root          58  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/3:1H-kblockd]
+root          59  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-rpciod]
+root          60  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-xprtiod]
+root          61  0.0  0.0      0     0 ?        S    10:59   0:00 [kswapd0]
+root          62  0.0  0.0      0     0 ?        S    10:59   0:00 [ecryptfs-kthread]
+root          63  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-nfsiod]
+root          66  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/0:1H-kblockd]
+root          67  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/u17:0-hci0]
+root          68  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-vfio-irqfd-cleanup]
+root          69  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/20-4411000.thermal-sensor]
+root          70  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/21-4411000.thermal-sensor]
+root          74  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/17-smp2p-adsp]
+root          75  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/18-smp2p-mpss]
+root          76  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/89-ss_phy_irq]
+root          77  0.0  0.0      0     0 ?        I    10:59   0:00 [kworker/1:3-mm_percpu_wq]
+root          86  0.0  0.0      0     0 ?        I    10:59   0:00 [kworker/2:9-mm_percpu_wq]
+root          89  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/96-4744000.mmc]
+root          90  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-sdhci]
+root          91  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/94-mmc0]
+root         116  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-mmc_complete]
+root         120  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/2:1H-kblockd]
+root         128  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/1:1H-events_highpri]
+root         159  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/98-1b8e300.pmu]
+root         163  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/101-pm8941_pwrkey]
+root         164  0.0  0.0      0     0 ?        S    10:59   0:00 [spi0]
+root         165  0.0  0.0      0     0 ?        I    10:59   0:00 [kworker/u16:4-events_power_efficient]
+root         167  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-hdcp workqueue]
+root         168  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-anx7625_work]
+root         169  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/123-anx7625-intp]
+root         170  0.0  0.0      0     0 ?        S    10:59   0:00 [gpu-worker]
+root         171  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/105-arm-smmu-context-fault]
+root         172  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-ring0]
+root         173  0.0  0.0      0     0 ?        S    10:59   0:00 [disp_snapshot]
+root         174  0.0  0.0      0     0 ?        S    10:59   0:00 [atomic-worker-0]
+root         175  0.0  0.0      0     0 ?        S    10:59   0:00 [atomic-worker-1]
+root         176  0.0  0.0      0     0 ?        S    10:59   0:00 [atomic-worker-2]
+root         177  0.0  0.0      0     0 ?        S    10:59   0:00 [atomic-worker-3]
+root         178  0.0  0.0      0     0 ?        S    10:59   0:00 [atomic-worker-4]
+root         179  0.0  0.0      0     0 ?        S    10:59   0:00 [atomic-worker-5]
+root         180  0.0  0.0      0     0 ?        S    10:59   0:00 [atomic-worker-6]
+root         181  0.0  0.0      0     0 ?        S    10:59   0:00 [atomic-worker-7]
+root         182  0.0  0.0      0     0 ?        S    10:59   0:00 [crtc_event:47]
+root         183  0.0  0.0      0     0 ?        S    10:59   0:00 [card0-crtc0]
+root         185  0.0  0.0      0     0 ?        I    10:59   0:00 [kworker/0:5-events]
+root         202  0.0  0.0      0     0 ?        S    10:59   0:00 [jbd2/mmcblk0p68-8]
+root         203  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-ext4-rsv-conversion]
+root         216  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-mld]
+root         217  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-ipv6_addrconf]
+root         254  0.0  0.2  33228  9344 ?        Ss   10:59   0:00 /usr/lib/systemd/systemd-journald
+systemd+     294  0.0  0.2  92504  7552 ?        Ssl  10:59   0:00 /usr/lib/systemd/systemd-timesyncd
+root         303  0.0  0.3  36748 12304 ?        Ss   10:59   0:01 /usr/lib/systemd/systemd-udevd
+root         354  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/126-dcvsh-irq-0]
+root         355  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/127-q6v5 wdog]
+root         360  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-cfg80211]
+root         361  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/134-q6v5 wdog]
+root         362  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-ath10k_wq]
+root         363  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-ath10k_aux_wq]
+root         364  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-ath10k_tx_complete_wq]
+root         366  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/133-venus]
+root         372  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-qcom_apr_rx]
+root         373  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-pdr_notifier_wq]
+root         374  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/u17:2-hci0]
+root         376  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/152-soundwire]
+root         378  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/153-soundwire]
+root         379  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/154-swr_wake_irq]
+root         397  0.0  0.0      0     0 ?        S    10:59   0:00 [jbd2/mmcblk0p69-8]
+root         398  0.0  0.0      0     0 ?        I<   10:59   0:00 [kworker/R-ext4-rsv-conversion]
+root         443  0.0  0.1 309952  6848 ?        Ssl  10:59   0:00 /usr/libexec/accounts-daemon
+avahi        446  0.0  0.1   6304  3888 ?        Ss   10:59   0:00 avahi-daemon: running [uno-q-bitsilica.local]
+root         448  0.0  0.1  13016  5980 ?        Ss   10:59   0:00 /usr/libexec/bluetooth/bluetoothd
+root         449  0.0  0.0   6988  2628 ?        Ss   10:59   0:00 /usr/sbin/cron -f
+message+     450  0.1  0.1   9456  5364 ?        Ss   10:59   0:02 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activatio
+polkitd      455  0.0  0.2 383588  9648 ?        Ssl  10:59   0:00 /usr/lib/polkit-1/polkitd --no-debug --log-level=notice
+root         456  0.0  0.2  17308  8056 ?        Ss   10:59   0:00 /usr/bin/rmtfs -r -P -s
+root         462  0.0  0.2  19408  8356 ?        Ss   10:59   0:00 /usr/lib/systemd/systemd-logind
+root         465  0.0  0.0   3200  1700 ?        Ss   10:59   0:00 /usr/bin/tqftpserv
+root         469  0.0  0.4 476856 16180 ?        Ssl  10:59   0:01 /usr/libexec/udisks2/udisksd
+avahi        481  0.0  0.0   6124  1716 ?        S    10:59   0:00 avahi-daemon: chroot helper
+root         509  0.0  0.5 341496 19208 ?        Ssl  10:59   0:01 /usr/sbin/NetworkManager --no-daemon
+root         512  0.0  0.3  18540 11944 ?        Ss   10:59   0:00 /usr/sbin/wpa_supplicant -u -s -O DIR=/run/wpa_supplicant GROUP=netdev
+root         517  0.0  0.0      0     0 ?        I    10:59   0:00 [kworker/u16:5-adb]
+root         532  0.0  0.0      0     0 ?        S<   10:59   0:00 [krfcommd]
+root         558  0.0  0.3 398344 11996 ?        Ssl  10:59   0:00 /usr/sbin/ModemManager
+root         570  0.0  0.3 1231964 11536 ?       Ssl  10:59   0:00 /usr/bin/arduino-router --unix-port /var/run/arduino-router.sock --serial-port /dev/ttyHS
+root         571  0.1  1.0 1931348 40988 ?       Ssl  10:59   0:02 /usr/bin/containerd
+root         572  0.0  0.1  11460  7388 ?        Ss   10:59   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root         577  0.0  0.0   7720  2192 tty1     Ss+  10:59   0:00 /sbin/agetty -o -- \u --noreset --noclear - linux
+root         578  0.0  0.1 381824  6864 ?        Ssl  10:59   0:00 /usr/sbin/lightdm
+root         580  0.0  0.0   7332  2344 ttyMSM0  Ss+  10:59   0:00 /sbin/agetty -o -- \u --noreset --noclear --keep-baud 115200,57600,38400,9600 - vt220
+root         623  0.1  2.5 751344 96004 tty7     Ssl+ 10:59   0:03 /usr/lib/xorg/Xorg :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novts
+arduino      633  0.0  0.2 397488 10316 ?        Ssl  10:59   0:00 /usr/lib/android-sdk/platform-tools/adbd
+root         634  0.0  0.1  11456  4068 ttyGS0   Ss+  10:59   0:00 /usr/bin/socat file:/dev/ttyGS0,raw,echo=0,b9600,crtscts=0 tcp:127.0.0.1:7500
+root         648  0.0  0.0      0     0 ?        S    10:59   0:00 [irq/99-dwc3]
+root         653  0.1  2.1 2038252 79628 ?       Ssl  10:59   0:03 /usr/sbin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root         706  0.0  0.2 173112  9104 ?        Sl   10:59   0:00 lightdm --session-child 17 20
+lightdm      765  0.1  0.3  24216 13396 ?        Ss   10:59   0:02 /usr/lib/systemd/systemd --user
+lightdm      799  0.0  0.1  26356  3928 ?        S    10:59   0:00 (sd-pam)
+root        1025  0.0  0.0      0     0 ?        I    10:59   0:00 [kworker/u16:7-adb]
+root        1093  0.0  0.0      0     0 ?        S    10:59   0:01 [napi/dummy#-0]
+arduino     1094  0.0  1.8 1341160 71180 ?       Ssl  10:59   0:01 /usr/bin/arduino-app-cli daemon --port 8800 --log-level error
+lightdm     1131  0.0  0.1   8428  4336 ?        Ss   10:59   0:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activati
+lightdm     1132  0.0  0.2 101844  9492 ?        S<sl 10:59   0:00 /usr/bin/pipewire
+lightdm     1133  0.0  0.1  85200  4676 ?        Ssl  10:59   0:00 /usr/bin/pipewire -c filter-chain.conf
+lightdm     1134  0.0  0.7 726388 26692 ?        S<sl 10:59   0:00 /usr/bin/wireplumber
+lightdm     1135  0.0  0.2 100576  7584 ?        S<sl 10:59   0:00 /usr/bin/pipewire-pulse
+lightdm     1137  0.2  2.4 816656 92268 ?        Ssl  10:59   0:05 /usr/sbin/lightdm-gtk-greeter
+rtkit       1141  0.0  0.0  21240  2748 ?        SNsl 10:59   0:00 /usr/libexec/rtkit-daemon
+lightdm     1162  0.0  0.1 382524  6836 ?        Ssl  10:59   0:00 /usr/libexec/at-spi-bus-launcher
+lightdm     1169  0.0  0.1   8424  4164 ?        S    10:59   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofor
+lightdm     1172  0.0  0.2 313624  7560 ?        Ssl  10:59   0:00 /usr/libexec/gvfsd
+root        1198  0.0  0.1  18576  5868 ?        S    10:59   0:00 lightdm --session-child 13 20
+lightdm     1200  0.0  0.1 170488  6664 ?        Sl   10:59   0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+root        1276  0.0  0.0      0     0 ?        I    11:14   0:00 [kworker/3:1]
+root        1278  0.0  0.0      0     0 ?        I    11:14   0:00 [kworker/1:1-cgroup_destroy]
+root        1298  0.0  0.0      0     0 ?        I    11:23   0:00 [kworker/2:0-cgroup_destroy]
+root        1301  0.0  0.0      0     0 ?        I    11:29   0:00 [kworker/0:1]
+arduino     1308  0.0  0.1   9232  5928 pts/0    Ss   11:32   0:00 -/bin/bash
+root        1321  0.0  0.0      0     0 ?        I    11:32   0:00 [kworker/1:0-cgroup_destroy]
+arduino     1328  0.0  0.2  16948  8228 pts/0    T    11:33   0:00 ssh arduino@192.168.1.25
+arduino     1337  200  0.1   9112  3760 pts/0    R+   11:36   0:00 ps aux
+arduino@uno-q-bitsilica:/proc$ cd /sys
+arduino@uno-q-bitsilica:/sys$ ls
+block  bus  class  dev  devices  firmware  fs  hypervisor  kernel  module  power
+arduino@uno-q-bitsilica:/sys$ ls /sys/class
+ata_device  devcoredump  fpga_manager  k3_udma_glue_chan  pci_bus       retimer         sas_phy      thermal             usb_role      zram-control
+ata_link    devfreq      graphics      leds               pci_epc       rfkill          sas_port     tpm                 vc
+ata_port    devlink      hidraw        mdio_bus           phy           rmtfs           scsi_device  tpmrm               vfio
+backlight   dma          hnae          mem                power_supply  rpmsg           scsi_disk    tty                 vfio-dev
+bdi         dma_heap     hwmon         misc               pps           rtc             scsi_host    typec               video4linux
+block       dmi          i2c-dev       mmc_host           ptp           sas_device      sound        typec_mux           virtio-ports
+bluetooth   drm          ieee80211     mtd                pwm           sas_end_device  spidev       udc                 vtconsole
+bsg         extcon       input         mux                regulator     sas_expander    spi_master   usbmisc             wakeup
+chromeos    firmware     iommu         net                remoteproc    sas_host        tee          usb_power_delivery  watchdog
+arduino@uno-q-bitsilica:/sys$ ls /sys/class/leds
+blue:bt  blue:user  green:user  green:wlan  mmc0::  red:panic  red:user
+arduino@uno-q-bitsilica:/sys$ cd /dev
+arduino@uno-q-bitsilica:/dev$ ls
+autofs              initctl         mmcblk0p10  mmcblk0p32  mmcblk0p54   port             rpmsg_ctrl2  tty20  tty42  tty7     ttyS2    vcsu
+block               input           mmcblk0p11  mmcblk0p33  mmcblk0p55   ptmx             rtc          tty21  tty43  tty8     ttyS3    vcsu1
+btrfs-control       kmsg            mmcblk0p12  mmcblk0p34  mmcblk0p56   pts              rtc0         tty22  tty44  tty9     udmabuf  vcsu2
+char                log             mmcblk0p13  mmcblk0p35  mmcblk0p57   ptyp0            shm          tty23  tty45  ttyGS0   uhid     vcsu3
+console             loop0           mmcblk0p14  mmcblk0p36  mmcblk0p58   ptyp1            snapshot     tty24  tty46  ttyHS1   uinput   vcsu4
+cpu_dma_latency     loop1           mmcblk0p15  mmcblk0p37  mmcblk0p59   ptyp2            snd          tty25  tty47  ttyMSM0  urandom  vcsu5
+cuse                loop2           mmcblk0p16  mmcblk0p38  mmcblk0p6    ptyp3            spidev0.0    tty26  tty48  ttyp0    usb-ffs  vcsu6
+disk                loop3           mmcblk0p17  mmcblk0p39  mmcblk0p60   ptyp4            stderr       tty27  tty49  ttyp1    v4l      vcsu7
+dma_heap            loop4           mmcblk0p18  mmcblk0p4   mmcblk0p61   ptyp5            stdin        tty28  tty5   ttyp2    vcs      vfio
+dri                 loop5           mmcblk0p19  mmcblk0p40  mmcblk0p62   ptyp6            stdout       tty29  tty50  ttyp3    vcs1     vga_arbiter
+ecryptfs            loop6           mmcblk0p2   mmcblk0p41  mmcblk0p63   ptyp7            tty          tty3   tty51  ttyp4    vcs2     video0
+efi_capsule_loader  loop7           mmcblk0p20  mmcblk0p42  mmcblk0p64   ptyp8            tty0         tty30  tty52  ttyp5    vcs3     video1
+fd                  loop-control    mmcblk0p21  mmcblk0p43  mmcblk0p65   ptyp9            tty1         tty31  tty53  ttyp6    vcs4     watchdog
+full                mapper          mmcblk0p22  mmcblk0p44  mmcblk0p66   ptypa            tty10        tty32  tty54  ttyp7    vcs5     watchdog0
+fuse                mem             mmcblk0p23  mmcblk0p45  mmcblk0p67   ptypb            tty11        tty33  tty55  ttyp8    vcs6     zero
+gpiochip0           mmcblk0         mmcblk0p24  mmcblk0p46  mmcblk0p68   ptypc            tty12        tty34  tty56  ttyp9    vcs7     zram0
+gpiochip1           mmcblk0boot0    mmcblk0p25  mmcblk0p47  mmcblk0p69   ptypd            tty13        tty35  tty57  ttypa    vcsa
+gpiochip2           mmcblk0boot0p1  mmcblk0p26  mmcblk0p48  mmcblk0p7    ptype            tty14        tty36  tty58  ttypb    vcsa1
+gpt-auto-root       mmcblk0boot0p2  mmcblk0p27  mmcblk0p49  mmcblk0p8    ptypf            tty15        tty37  tty59  ttypc    vcsa2
+hugepages           mmcblk0boot0p3  mmcblk0p28  mmcblk0p5   mmcblk0p9    qcom_rmtfs_mem1  tty16        tty38  tty6   ttypd    vcsa3
+hwrng               mmcblk0boot1    mmcblk0p29  mmcblk0p50  mmcblk0rpmb  random           tty17        tty39  tty60  ttype    vcsa4
+i2c-0               mmcblk0boot1p1  mmcblk0p3   mmcblk0p51  mqueue       rfkill           tty18        tty4   tty61  ttypf    vcsa5
+i2c-1               mmcblk0boot1p2  mmcblk0p30  mmcblk0p52  net          rpmsg_ctrl0      tty19        tty40  tty62  ttyS0    vcsa6
+i2c-2               mmcblk0p1       mmcblk0p31  mmcblk0p53  null         rpmsg_ctrl1      tty2         tty41  tty63  ttyS1    vcsa7
+arduino@uno-q-bitsilica:/dev$

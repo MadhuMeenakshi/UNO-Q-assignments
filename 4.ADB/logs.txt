@@ -1,0 +1,86 @@
+ ls
+ ArduinoApps   harsha   kiran   lost+found   Madhu   sethu   task4_dmesg.log  'ystemctl status ssh'
+arduino@uno-q-bitsilica:~$ cd Madhu/
+arduino@uno-q-bitsilica:~/Madhu$ ls
+hello  hello.c  led  led.c
+arduino@uno-q-bitsilica:~/Madhu$ cat hello.c
+#include <stdio.h>
+
+int main(void)
+{
+    printf("Hello from UNO Q Linux!\n");
+
+    return 0;
+}
+arduino@uno-q-bitsilica:~/Madhu$ ./hello
+Hello from UNO Q Linux!
+arduino@uno-q-bitsilica:~/Madhu$ ./led
+^Z
+[1]+  Stopped                 ./led
+arduino@uno-q-bitsilica:~/Madhu$ jobs
+[1]+  Stopped                 ./led
+arduino@uno-q-bitsilica:~/Madhu$ fg
+./led
+^Z
+[1]+  Stopped                 ./led
+arduino@uno-q-bitsilica:~/Madhu$ whoami
+arduino
+arduino@uno-q-bitsilica:~/Madhu$ uname -a
+Linux uno-q-bitsilica 6.16.7-g0dd6551ae96b #1 SMP PREEMPT Wed Dec 10 14:36:39 UTC 2025 aarch64 GNU/Linux
+arduino@uno-q-bitsilica:~/Madhu$ top
+top - 11:08:58 up 9 min,  0 users,  load average: 0.00, 0.10, 0.10
+Tasks: 166 total,   1 running, 164 sleeping,   1 stopped,   0 zombie
+%Cpu(s):  0.1 us,  0.4 sy,  0.0 ni, 99.4 id,  0.1 wa,  0.1 hi,  0.0 si,  0.0 st
+MiB Mem :   3669.9 total,   2831.1 free,    476.9 used,    539.9 buff/cache
+MiB Swap:   1834.9 total,   1834.9 free,      0.0 used.   3193.0 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   1268 arduino   20   0   10184   5348   3244 R   1.0   0.1   0:00.09 top
+      1 root      20   0   25348  14616   9852 S   0.0   0.4   0:06.04 systemd
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 pool_workqueue_release
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-rcu_gp
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-sync_wq
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-kvfree_rcu_reclaim
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-slub_flushwq
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-netns
+     11 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H-events_highpri
+     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-mm_percpu_wq
+     14 root      20   0       0      0      0 S   0.0   0.0   0:00.01 ksoftirqd/0
+     15 root      20   0       0      0      0 I   0.0   0.0   0:00.04 rcu_preempt
+     16 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_exp_par_gp_kthread_worker/0
+     17 root      20   0       0      0      0 S   0.0   0.0   0:00.06 rcu_exp_gp_kthread_worker
+     18 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 migration/0
+     19 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0
+     20 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1
+     21 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 migration/1
+     22 root      20   0       0      0      0 S   0.0   0.0   0:00.01 ksoftirqd/1
+     23 root      20   0       0      0      0 I   0.0   0.0   0:00.02 kworker/1:0-cgroup_destroy
+     24 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H-kblockd
+     25 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/2
+     26 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 migration/2
+     27 root      20   0       0      0      0 S   0.0   0.0   0:00.00 ksoftirqd/2
+     29 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/2:0H-events_highpri
+     30 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/3
+     31 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 migration/3
+     32 root      20   0       0      0      0 S   0.0   0.0   0:00.01 ksoftirqd/3
+     33 root      20   0       0      0      0 I   0.0   0.0   0:00.07 kworker/3:0-mm_percpu_wq
+     34 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/3:0H-events_highpri
+     35 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs
+     36 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/R-inet_frag_wq
+     37 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_tasks_kthread
+[2]+  Stopped                 top
+arduino@uno-q-bitsilica:~/Madhu$ htop
+
+[3]+  Stopped                 htop
+arduino@uno-q-bitsilica:~/Madhu$ uname -a
+Linux uno-q-bitsilica 6.16.7-g0dd6551ae96b #1 SMP PREEMPT Wed Dec 10 14:36:39 UTC 2025 aarch64 GNU/Linux
+arduino@uno-q-bitsilica:~/Madhu$ ls -ltra
+total 48
+-rw-rw-r--  1 arduino arduino    95 Sep 29 07:35 hello.c
+-rwxrwxr-x  1 arduino arduino 70432 Sep 29 07:35 hello
+-rw-rw-r--  1 arduino arduino   640 Sep 29 07:37 led.c
+drwxrwxr-x  2 arduino arduino  4096 Sep 29 07:37 .
+-rwxrwxr-x  1 arduino arduino 70632 Sep 29 07:37 led
+drwxr-xr-x 17 arduino arduino  4096 Oct  1 11:07 ..
+arduino@uno-q-bitsilica:~/Madhu$

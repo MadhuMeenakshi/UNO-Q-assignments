@@ -1,0 +1,68 @@
+ exit
+logout
+
+madhu@MADHU-KAUSHIK:/mnt/c/Btsilica_Projects/QC_tools/platform-tools$ ./adb.exe shell
+arduino@uno-q-bitsilica:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: br-e934ee4dd8fd: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:d5:2e:a7:e7 brd ff:ff:ff:ff:ff:ff
+    inet 172.19.0.1/16 brd 172.19.255.255 scope global br-e934ee4dd8fd
+       valid_lft forever preferred_lft forever
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:e8:93:60:68 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+4: br-3f91988df8f4: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:ce:68:01:dc brd ff:ff:ff:ff:ff:ff
+    inet 172.24.0.1/16 brd 172.24.255.255 scope global br-3f91988df8f4
+       valid_lft forever preferred_lft forever
+5: br-5051813c4388: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:c6:4d:5d:3d brd ff:ff:ff:ff:ff:ff
+    inet 172.25.0.1/16 brd 172.25.255.255 scope global br-5051813c4388
+       valid_lft forever preferred_lft forever
+6: br-007a4242258a: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:42:fc:4c:78 brd ff:ff:ff:ff:ff:ff
+    inet 172.23.0.1/16 brd 172.23.255.255 scope global br-007a4242258a
+       valid_lft forever preferred_lft forever
+7: br-0ba10762b7bd: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:39:39:18:ae brd ff:ff:ff:ff:ff:ff
+    inet 172.20.0.1/16 brd 172.20.255.255 scope global br-0ba10762b7bd
+       valid_lft forever preferred_lft forever
+8: br-337a535e7c38: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:ec:8f:3c:34 brd ff:ff:ff:ff:ff:ff
+    inet 172.21.0.1/16 brd 172.21.255.255 scope global br-337a535e7c38
+       valid_lft forever preferred_lft forever
+9: br-97c4740551dd: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:04:90:b6:8f brd ff:ff:ff:ff:ff:ff
+    inet 172.22.0.1/16 brd 172.22.255.255 scope global br-97c4740551dd
+       valid_lft forever preferred_lft forever
+10: br-e703dcb965fe: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether 02:42:53:d4:41:3a brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-e703dcb965fe
+       valid_lft forever preferred_lft forever
+11: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 14:b5:cd:f0:be:23 brd ff:ff:ff:ff:ff:ff
+    altname wlx14b5cdf0be23
+    inet 192.168.5.199/24 brd 192.168.5.255 scope global dynamic noprefixroute wlan0
+       valid_lft 7040sec preferred_lft 7040sec
+    inet6 fe80::575d:1e3b:81f7:3e9c/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+arduino@uno-q-bitsilica:~$ hostname -I
+172.19.0.1 172.17.0.1 172.24.0.1 172.25.0.1 172.23.0.1 172.20.0.1 172.21.0.1 172.22.0.1 172.18.0.1 192.168.5.199
+arduino@uno-q-bitsilica:~$ ssh arduino@<UNO_Q_IP>
+bash: syntax error near unexpected token `newline'
+arduino@uno-q-bitsilica:~$ ssh arduino@192.168.1.25
+.'
+
+
+
+
+
+^Z
+[1]+  Stopped                 ssh arduino@192.168.1.25
+arduino@uno-q-bitsilica:~$
